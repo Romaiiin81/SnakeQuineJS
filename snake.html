@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Snake</title>
+<style>
+    body{margin: 0; height: 100vh; display: flex; justify-content: center; align-items: center;}
+    pre{font-family: monospace;font-size: 4vh;font-weight: 900; line-height: 95%;}
+</style>
+<script>
+    ($=ƒ=>{l=22;r=$=>~~(Math.random()*l);k=3;s=[[8,9]];f=[9,9];(d=document).onkeydown=e=>k=e.which%4;p=(a,b)=>a!=b&&a[0]==b[0]&&a[1]==b[1];t=(f)=>s.some(e=>p(e,f));setInterval(ƒ=>{h=i=>s[0][i];s.unshift([h(0),h(1)]);k%2?s[0][0]+=k-2:s[0][1]+=1-k;s[0]=[(l+h(0))%l,(l+h(1))%l];p(s[0],f)?f=[r(),r()]:s.pop();s.forEach(e=>t(e)?alert("END"):e);for(y=o="";y<l;y++)for(o+="\n",x=0;x<l;x++)o+=`($=${$})()`[x+y*l].fontcolor(t([x,y])?'#0B0':p(f,[x,y])?'red':0);d.body.innerHTML="<pre>"+o},100);})()
+</script>
+
+</head>
+
+<body></body>
+
+</html>
